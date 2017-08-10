@@ -85,7 +85,7 @@ mqtt_dns_found(const char *name, ip_addr_t *ipaddr, void *arg)
 			//skylab_get_free_heap();
 			//espconn_secure_set_size(0x01,3*1024);
 			espconn_secure_ca_enable(0x01,0x77);
-			//espconn_secure_cert_req_enable(0x01,0x78);
+			espconn_secure_cert_req_enable(0x01,0x78);
 			espconn_secure_connect(client->pCon);
 #else
 			INFO("TCP: Do not support SSL\r\n");
